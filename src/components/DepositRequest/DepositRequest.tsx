@@ -56,11 +56,11 @@ function DepositRequest({ users }: Props) {
         <Table aria-label="simple table" sx={{border: "2px solid gray"}}>
           <TableHead sx={{backgroundColor:"#5993f7"}} >
             <TableRow>
-              <TableCell align="center">Avatar</TableCell>
-              <TableCell align="center">Name</TableCell>
+              <TableCell align="left">Avatar</TableCell>
+              <TableCell align="center">Nombre</TableCell>
               <TableCell align="center">Monto</TableCell>
-              <TableCell align="center">Date</TableCell>
-              <TableCell align="center">Days</TableCell>
+              <TableCell align="center">Fecha</TableCell>
+              <TableCell align="center">Dias</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -77,9 +77,9 @@ function DepositRequest({ users }: Props) {
                   <Avatar alt="avatar" src={user.avatar} />
                 </TableCell>
                 <TableCell align="center"> {user.name} </TableCell>
-                <TableCell align="center"> {user.monto}Q </TableCell>
+                <TableCell align="center"> Q{user.monto} </TableCell>
                 <TableCell align="center"> {user.date} </TableCell>
-                <TableCell align="center"> {user.days} days </TableCell>
+                <TableCell align="center"> {user.days} Dias </TableCell>
               </TableRow>
             ))}
           </TableBody>

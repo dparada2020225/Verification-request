@@ -23,7 +23,7 @@ function VerificationRequests({ users }: Props) {
                   </Avatar>
               </ListItemAvatar>
               <ListItemText secondary={user.name}/>
-              <ListItemText className="left"secondary={user.date + ', ' + user.days + ' days'}/>
+              <ListItemText className="left"secondary={user.date + ', ' + user.days + ' Dias'}/>
           </ListItem></>
               ))} 
     </List>
