@@ -5,12 +5,7 @@ function NavBar() {
   return (
     <nav>
       <Button
-        sx={{
-          margin: "10px",
-          borderRadius: 0,
-          borderBottom: 2
-        }}
-        // color="primary"
+        sx={{  margin: "5px", borderRadius: 0,  borderBottom: "4px solid #03b1bb", color: "#03b1bb"}}
         variant="text"
         component={Link}
         to="/VerificationRequests"
@@ -18,8 +13,7 @@ function NavBar() {
         Solicitudes de verificación
       </Button>
       <Button
-        sx={{ borderRadius: 0, borderBottom: 2 }}
-        // color="primary"
+        sx={{  margin: "5px", borderRadius: 0,  borderBottom: "4px solid #03b1bb", color: "#03b1bb"}}
         variant="text"
         component={Link}
         to="/DepositRequest"
