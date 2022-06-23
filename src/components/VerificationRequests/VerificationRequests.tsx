@@ -17,7 +17,14 @@ import {
   }
   
   function VerificationRequests({ users }: Props) {
-     return (
+
+    users.sort((a, b) => (+(a.date)) - (+(b.date)))
+    
+    
+    
+    return (
+
+      
       <Box
         sx={{
           display: "flex",
@@ -55,10 +62,10 @@ import {
                   <TableCell align="right">
                   <Grid container spacing={1}>
                     <Grid item xs={12}>
-                    {user.date}
+                    {user.date.toDateString()}
                     </Grid>
                     <Grid item xs={12}>
-                    {user.days} days ago
+                    {Math.round((new Date().getTime()- Math.abs(user.date.getTime()))/(1000 * 3600 * 24))} days ago
                      </Grid>
                  </Grid>
                     </TableCell>

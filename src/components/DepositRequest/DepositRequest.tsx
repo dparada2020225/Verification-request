@@ -78,7 +78,7 @@ function DepositRequest({ users }: Props) {
                 </TableCell>
                 <TableCell align="center"> {user.name} </TableCell>
                 <TableCell align="center"> Q{user.monto} </TableCell>
-                <TableCell align="center"> {user.date} </TableCell>
+                <TableCell align="center"> {user.date.toDateString()} </TableCell>
                 <TableCell align="center"> {user.days} Dias </TableCell>
               </TableRow>
             ))}
