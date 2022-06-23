@@ -1,18 +1,28 @@
-import Avatar from "@mui/material/Avatar";
-import * as React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ImageIcon from '@mui/icons-material/Image';
-import './VerificationRequests.css'
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Paper,
+  Avatar,
+  Grid
+} from "@mui/material";
+import React from "react";
 import { User } from "../../interfaces/User";
+import { users } from "../../shared/users";
+
+
+
 
 interface Props {
   users: User[];
 }
 
+
 function VerificationRequests({ users }: Props) {
+<<<<<<< Updated upstream
     return (
         <List className="List"sx={{ width: '100%', maxWidth: 800, border: "2px solid #22c49b"}}>
       {users.map((user) => (
@@ -30,3 +40,60 @@ function VerificationRequests({ users }: Props) {
       );
     }
 export default VerificationRequests;
+=======
+   users.sort((a, b) => (+(a.date)) - (+(b.date)))
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: 8,
+      }}
+    >
+      <TableContainer
+        component={Paper}
+        sx={{
+          maxWidth: "900px",
+          padding: "5px",
+          border: "2px dashed #96e6b3",
+          background: "#f1fffa"
+        }}
+      >
+        <Table aria-label="simple table" >
+          <TableBody>
+            {users.map((user) => (
+              <TableRow
+                key={user.name}
+                sx={{
+                  padding: "0px",
+                  borderTop: "7px double ",
+                  borderBottom: "7px double ",
+                  borderColor: "#96e6b3",
+                }}
+              >
+                <TableCell align="right" width={"1px"}>
+                  <Avatar alt="avatar" src={user.avatar} />
+                </TableCell>
+                <TableCell align="left"> {user.name} </TableCell>
+                {/* <TableCell align="right"> {user.date}, {user.days} days ago   </TableCell> */}
+                <TableCell align="right">
+                  <Grid container spacing={1}>
+                    <Grid item xs={12}>
+                     {user.date.toDateString()}
+                    </Grid>
+                    <Grid item xs={12}>
+                      {user.days} days ago
+                    </Grid>
+                  </Grid>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
+  );
+}
+export default VerificationRequests;
+>>>>>>> Stashed changes

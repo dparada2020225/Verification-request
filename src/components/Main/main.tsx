@@ -1,5 +1,4 @@
 import './main.css'
-import VerificarionRequests from '../verificarionRequests/verificarionRequests'
 import AuthyDepositRequests from '../AuthyDepositRequests/AuthyDepositRequest';
 const Main = () => {
     return (

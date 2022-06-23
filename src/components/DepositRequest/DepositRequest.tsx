@@ -77,9 +77,14 @@ function DepositRequest({ users }: Props) {
                   <Avatar alt="avatar" src={user.avatar} />
                 </TableCell>
                 <TableCell align="center"> {user.name} </TableCell>
+<<<<<<< Updated upstream
                 <TableCell align="center"> {user.monto}Q </TableCell>
                 <TableCell align="center"> {user.date} </TableCell>
                 <TableCell align="center"> {user.days} days </TableCell>
+=======
+                <TableCell align="center"> Q{user.monto} </TableCell>
+                <TableCell align="center"> {user.days} Dias </TableCell>
+>>>>>>> Stashed changes
               </TableRow>
             ))}
           </TableBody>
@@ -96,5 +101,5 @@ function DepositRequest({ users }: Props) {
       </TableContainer>
     </Box>
   );
-}//test
+}
 export default DepositRequest;
