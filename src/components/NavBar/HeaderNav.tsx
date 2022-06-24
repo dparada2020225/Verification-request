@@ -1,6 +1,7 @@
 import '../VerificationRequests/VerificationRequests.css'
 import { Box, Button, Typography } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { blueGrey } from '@mui/material/colors';
 
 function HeaderNav() {
   return (
@@ -13,18 +14,11 @@ function HeaderNav() {
         marginLeft: 5
       }}
     >
-      <Typography  variant="h4" 
-      sx={{color: "#03b1bb"  }}>Admin Profile</Typography>
+      <Typography  variant="h4">Admin Profile</Typography>
       <Button
-        variant="text"
+        variant="outlined"
         endIcon={<LogoutIcon />}
-        sx={{ 
-          width: 190, height: 40, 
-          marginLeft: 1.45, 
-          border: 3,
-          borderRadius: 2,
-          borderBottom: "4px solid #03b1bb", 
-          color: "#03b1bb"  }}
+        sx={{ width: 190, height: 40, marginLeft: 1.45, border: 3, background:"#c5e2f6"}}
       >
         Cerrar Sesión
       </Button>
